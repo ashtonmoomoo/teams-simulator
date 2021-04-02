@@ -45,3 +45,4 @@ if __name__ == '__main__':
     for i in range(int(number) - 1):
         name = replace(name)
     print(name)
+    print('Backslash streak: ' + str(2 ** (int(number) - 2) - 1))
