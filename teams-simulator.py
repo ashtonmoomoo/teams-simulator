@@ -37,12 +37,11 @@ def pre_proc(word: str) -> str:
     return word
 
 if __name__ == '__main__':
-    name = sys.argv[1]
-    number = sys.argv[2]
+    name = pre_proc(sys.argv[1])
+    number = int(sys.argv[2])
 
-    name = pre_proc(name)
-
-    for i in range(int(number) - 1):
+    for i in range(number - 1):
         name = replace(name)
+
     print(name)
-    print('Backslash streak: ' + str(2 ** (int(number) - 2) - 1))
+    print('Backslash streak: ' + str(2 ** (number - 2) - 1))
